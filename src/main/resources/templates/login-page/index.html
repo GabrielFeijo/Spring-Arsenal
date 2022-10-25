@@ -1,0 +1,72 @@
+<!DOCTYPE html >
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="login-page/style.css" type="text/css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+    <script src="../script-alert/script.js" type="text/javascript"></script>
+    <title>Arsenal Inovação</title>
+</head>
+<body>
+    <div id="alert"></div>
+    <div  th:if="${param.error != null}">
+        <script th:inline="javascript">
+         /*<![CDATA[*/
+            showAlert('danger','Erro!',"Email ou senha incorretos!");  
+          /*]]>*/
+        </script>     
+    </div>
+    <div  th:if="${param.logout != null}">
+        <script th:inline="javascript">
+         /*<![CDATA[*/
+         showAlert("success","Sucesso!","Você deslogou com sucesso!");
+          /*]]>*/
+        </script>     
+    </div>
+
+ 
+    <div class="container wrap">
+  
+        <div class="row justify-content-between">
+
+          <div class="col-md-6 align-self-center text-center"> 
+                <h2 class="title text-center mt-2" id="message">Que bom ter você de volta! </h2>
+                <img src="login-page/images/main-image.png" alt="" class="main-image mt-5">
+         </div>
+            <div class="horizontal-line col-md-1"></div>
+            <div class="col-12 col-md-5 align-self-center text-center ">
+        
+                    <h2 class="title text-center">Faça seu login</h2>
+                 
+                   
+                <form method="POST" th:action="@{sessao/inicio}">
+                
+                    <input type="email" name="email"  id="email" placeholder="Email" class="text-center mt-4 input" >
+                    <input type="password" name="pass" id="pass" placeholder="Senha" class="text-center mt-4 input"  >
+                    <p class="account mt-2">Novo aqui? <a href="/registrar" class="cad">Cadastre-se</a></p>
+                    <p class="account mt-2"><a href="/esqueceu-a-senha" class="pass">Esquceu a senha?</a></p>
+                    <input type="submit" class="button-acess mt-3" id="btn-enter"/>
+                </form>
+        
+           </div>
+      </div>      
+  </div>
+
+
+
+
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="login-page/script.js" type="text/javascript"></script>
+
+</body>
+</html>

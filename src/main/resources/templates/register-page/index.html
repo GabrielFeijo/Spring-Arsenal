@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../login-page/style.css" >
+    <link rel="stylesheet" href="register-page/style.css" >
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+	
+	<title>Registre-se - Arsenal</title>
+	<head>
+	<body>
+		<form  action="">
+
+			<div id="alert"></div>
+
+
+			<div class="container wrap">
+
+				<div class="row justify-content-around">
+
+					<div class="col-md-6 align-self-center text-center">
+							<h2 class="title text-center mt-2" id="message">Novo por aqui? Faça seu cadastro!</h2>
+							<img src="register-page/images/register-image.png" alt="" class="main-image mt-5">
+					</div>
+					<div class="horizontal-line col-md-1">
+						<p class="info-register">Preencha com suas informações pessoais</p>
+				</div>
+				<div class="col-12 col-md-5 align-self-center main">
+					<p class="small-info">Preencha com suas informações pessoais</p>
+				
+
+					<div id="first-infos"  >
+						<input type="text" name="nome"  placeholder="Nome Completo*" class="mt-6 input no-margim">
+						<input type="email" name="email" id="mail" placeholder="Email*" class="mt-4 input no-margim" autocomplete="off">
+						<input type="password" name="senha" placeholder="Senha*" class="mt-4 input no-margim" autocomplete="off">
+						<input type="password"  placeholder="Repita a senha*" class="mt-4 input no-margim">
+						<div class="form-check mt-4 div-wid no-margim">
+							<input class="form-check-input" type="checkbox" value="" id="flexCheckPass">
+							<label class="form-check-label line-1" for="flexCheckPass">
+								Mostrar Senha
+							</label>
+						</div>
+
+					
+					</div>
+					<div id="second-infos">
+						<input type="tel" name="phone"  placeholder="Celular com DDD*" id="phone" class="mt-7 input no-margim">
+						<input type="text" name="cpf"  placeholder="CPF" id="CPF" class="mt-4 input no-margim">
+						<div ><label for="birth" class="line-1 label">Nascimento:⠀</label><input type="date" name="nascimento" id="birth" class="mt-4 input no-margim no-display"></div>
+				
+
+						<div class="mt-4 custom-select">
+							<label for="gender" class="line-1 label">Escolaridade:</label>
+							<select name="escolaridade" class="input no-margim select">
+								<option value="" disabled selected>Selecione uma opção</option>
+								<option value="Superior Completo">Superior Completo</option>
+								<option value="Superior Incompleto">Superior Incompleto</option>
+								<option value="Médio Completo">Médio Completo</option>
+								<option value="Médio Incompleto">Médio Incompleto</option>
+								<option value="Fundamental Completo">Fundamental Completo</option>
+								<option value="Fundamental Incompleto">Fundamental Incompleto</option>
+							</select>
+						</div> 
+						
+						<div class="mt-4 custom-select">
+							<label for="gender" class="line-1 label ">Gênero:</label>
+							<select name="genero" class="input no-margim select">
+								<option value="" disabled selected>Selecione uma opção</option>
+								<option value="masculino">Masculino</option>
+								<option value="Feminino">Feminino</option>
+								<option value="Transgênero">Transgênero</option>
+								<option value="Não Binario">Não Binário</option>
+								<option value="none">Prefiro não dizer</option>
+							</select>
+						</div> 
+						
+					</div>
+					<div id="adress">
+						<div class="mt-7 teste no-margim ">
+							<input type="text" name="city"  placeholder="Cidade*" class="left input-adress no-margim" required>
+						
+					
+
+							<select id="UF" class="input-adress no-margim select"  name="UF" required>
+								<option value="" disabled selected>Selecione</option>
+								<option value="AC">AC</option>
+								<option value="AL">AL</option>
+								<option value="AP">AP</option>
+								<option value="AM">AM</option>
+								<option value="BA">BA</option>
+								<option value="CE">CE</option>
+								<option value="DF">DF</option>
+								<option value="ES">ES</option>
+								<option value="GO">GO</option>
+								<option value="MA">MA</option>
+								<option value="MS">MS</option>
+								<option value="MT">MT</option>
+								<option value="MG">MG</option>
+								<option value="PA">PA</option>
+								<option value="PB">PB</option>
+								<option value="PR">PR</option>
+								<option value="PE">PE</option>
+								<option value="PI">PI</option>
+								<option value="RJ">RJ</option>
+								<option value="RN">RN</option>
+								<option value="RS">RS</option>
+								<option value="RO">RO</option>
+								<option value="RR">RR</option>
+								<option value="SC">SC</option>
+								<option value="SP">SP</option>
+								<option value="SE">SE</option>
+								<option value="TO">TO</option>
+							</select>
+						</div>
+						<input type="text" name="streetAdress"  placeholder="Rua*" class="mt-4 input input-lg no-margim" required>
+						<div class="mt-4 teste no-margim">
+							<input type="number" name="number"  placeholder="Número*" class="left input-adress no-margim" required>
+							<input type="text" name="CEP"  placeholder="CEP*" id="CEP" class="input-adress no-margim" required>
+						</div>
+						<input type="text" name="complement"  placeholder="Complemento" class="mt-4 input input-lg no-margim">
+						<div class="form-check mt-4 label-wid no-margim">
+							<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+							<label class="form-check-label line-1" for="flexCheckDefault">
+								Concordo com o <a href="" class="cad termos">Termos de Uso</a> da Arsenal Inovação
+							</label>
+							</div>										
+						</div>
+				
+						<div class="buttons mt-5">
+							<button class="button-acess" id="return">Voltar</button>
+							<button class="button-acess" id="continue">Continuar</button>
+						</div>
+					</div>    
+						
+				</div>
+			</div>	
+		</form>
+			
+						
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>      
+		<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="../script-alert/script.js"></script>
+		<script src="register-page/script.js" ></script>
+	</body>
+</html>

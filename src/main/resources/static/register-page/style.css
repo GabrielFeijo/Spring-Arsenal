@@ -1,0 +1,160 @@
+ .info-register{
+    width: 370px;
+    height: 61px;
+    background: #DA217F;
+    border-radius: 0px 20px 20px 0px;
+    color:#fff;
+    font-family: var(--bold-font);
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    
+}
+.small-info{
+    width: 370px;
+    height: 61px;
+    background: #DA217F;
+    border-radius: 20px;
+    color:#fff;
+    font-family: var(--bold-font);
+    padding-top: 15px;
+   position: relative;
+   top: -30px;
+    text-align: center;
+    margin:auto;
+ 
+}
+.no-margim{
+    margin:0;
+}
+.no-display{
+    display: inline;
+}
+.mt-6{
+    margin-top: 60px;
+}
+.mt-7{
+    margin-top: 70px;
+}
+#second-infos,#adress, .small-info{
+    display:none;
+}
+.label{
+
+    background-color:#00000000;
+    border:0;
+   
+    border-bottom:  2px solid #861B64;
+
+    padding-bottom: 5px;
+}
+.custom-select > select{
+    cursor: pointer;
+}
+
+.select{
+    cursor: pointer;
+    display: inline;
+  
+    padding-bottom: 3px;
+
+}
+.select > option{
+    background-color: #861B64 !important;
+    color:#fff;
+   
+}
+
+.select-gender > option:disabled  {
+    color:#f0f0f0;
+}
+.select-gender > option{
+   cursor: pointer;
+
+}
+#first-infos{
+    align-items: center;
+}
+
+
+.input-adress{
+  
+    width: 100px;  
+    background-color:#00000000;
+    border:0;
+    outline:none;
+    border-bottom:  2px solid #861B64;
+    font-family: var(--bold-font);
+    font-size: 16px;
+    color: #861B64;
+    padding-bottom: 5px;
+}
+.input-adress::placeholder{
+    
+    font-family: var(--bold-font);
+    font-size: 16px;
+    color: #861B64;
+
+}
+.input-lg{
+    width: 300px;  
+}
+.left{
+    margin-right: 40px;
+    width: 150px ;  
+}
+
+.termos{
+    font-family: var(--bold-font);
+    text-decoration: underline;
+}
+#flexCheckDefault, #flexCheckPass{
+    margin-top: 7px;
+    cursor: pointer;
+
+}
+#flexCheckDefault:checked,  #flexCheckPass:checked{
+    background-color:#861B64;
+    border-color: #861B64;
+}
+#flexCheckDefault:focus,  #flexCheckPass:focus {
+    box-shadow: none;
+
+}
+.label-wid{
+    max-width: 300px;
+}
+.div-wid{
+    max-width: 150px;
+}
+@media (max-width: 1008px) {
+  
+   #continue{
+       margin-top:10px !important;
+   }
+   .buttons{
+    text-align: center;
+   }
+ 
+}
+@media (max-width:768px) {
+   .no-margim{
+       margin:auto;
+   }
+   .left{
+    margin-right: 40px;
+
+    } 
+   .small-info{
+       display:block;
+   } 
+ 
+ 
+}
+#enviar{
+    display:none;
+}
+.teste{
+    width:300px;
+   
+}
