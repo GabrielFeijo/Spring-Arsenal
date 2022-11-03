@@ -24,5 +24,17 @@ public class HomeController {
     public String register(){
         return "register-page/index";
     }
+
+    @RequestMapping(value = "/contato", method = RequestMethod.GET)
+    public String contact(){
+        return "contact-page/index";
+    }
+
+    @RequestMapping(value = "/perguntas-frequentes", method = RequestMethod.GET)
+    public String faq(){
+        return "forum-page/index";
+    }
+
+
      
 }
