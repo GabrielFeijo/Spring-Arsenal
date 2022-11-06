@@ -37,10 +37,10 @@ public class UsuarioController {
     @PostMapping("/usuarios")
     public ResponseEntity<Object> createUser(@Valid @RequestBody Usuario usuario){
         if (usuarioService.existsByEmail(usuario.getEmail())){
-            return ResponseEntity.status(400).body("Conflict: Email is already in use!");
+            return ResponseEntity.status(400).body("Email já está sendo utilizado!");
         }
         if (usuarioService.existsByCPF(usuario.getCPF())){
-            return ResponseEntity.status(400).body("Conflict: CPF is already in use!");
+            return ResponseEntity.status(400).body("CPF já está sendo utilizado!");
         }
         return ResponseEntity.status(201).body(usuarioService.createUser(usuario));
     }

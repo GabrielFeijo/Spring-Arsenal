@@ -4,7 +4,7 @@ page = 'first';
 $("#phone").mask("(00) 0 0000-0000");
 $("#CPF").mask('000.000.000-00');
 $("#CEP").mask('00000-000');
-
+  
 function formContinue(e){
     e.preventDefault();
    
@@ -52,18 +52,18 @@ function formContinue(e){
          
            
 
-            document.getElementById('adress').style.display = 'block';
+            document.getElementById('address').style.display = 'block';
             document.getElementsByClassName('info-register')[0].innerHTML = 'Endereço'
             document.getElementsByClassName('small-info')[0].innerHTML = 'Endereço'
           
-            page = 'adress';
+            page = 'address';
         }
 
         
      
-    }else if (page == 'adress'){
+    }else if (page == 'address'){
         let info = true;
-        let adress = true;
+        let address = true;
          for (i=8; i<10;i++){
              if (document.getElementsByClassName('input')[i].value.length == ''){
                  info = false;
@@ -73,13 +73,13 @@ function formContinue(e){
         }
 
         for (i=0; i<4;i++){
-            if (document.getElementsByClassName('input-adress')[i].value.length == ''){
-                adress = false;
+            if (document.getElementsByClassName('input-address')[i].value.length == ''){
+                address = false;
                 showAlert("danger","Erro!","Preencha todas as informações.");
                 break;
             }
         }
-        if (info == true && adress == true){
+        if (info == true && address == true){
             if (document.querySelector("#flexCheckDefault").checked == false){
                 showAlert("warning","Alerta!","Você precisa ler e concordar com os Termos de Uso!");
             }else{
@@ -119,18 +119,24 @@ function cadastrar(){
         
              
             } else if (res.status == 400){
-                
-                showAlert("danger","Erro!","Email ou CPF já estão sendo utilizados!");
+              
+              let myPromise = res.text()
+		            myPromise.then((message) => {  
+				     showAlert("danger","Erro!", message);
+				});
+						    
+               
+               
                 return "erro";
-            }else{
-                console.log(res)
+            }else{ 
+                 console.log(res)
                 return Promise.reject({ status: res.status, statusText: res.statusText });
             }
           })
             .then(res => {
                 if (Number(res['userid'])){
                     console.log(Number(res['userid']))
-                    saveAdress( res['userid'])  
+                    saveaddress( res['userid'])  
                 }   
             }                      
             )
@@ -139,7 +145,7 @@ function cadastrar(){
 
    
 }
-function saveAdress(ownerid){
+function saveaddress(ownerid){
            
     fetch("http://localhost:8080/enderecos",
     {  
@@ -151,7 +157,7 @@ function saveAdress(ownerid){
        body: JSON.stringify({
            "usuario_id":ownerid,
            "cidade": document.getElementsByName('city')[0].value,
-           "rua": document.getElementsByName('streetAdress')[0].value,
+           "rua": document.getElementsByName('streetaddress')[0].value,
            "numero": Number(document.getElementsByName('number')[0].value),
            "cep": document.getElementsByName('CEP')[0].value,
            "complemento": document.getElementsByName('complement')[0].value,
@@ -180,8 +186,8 @@ function returnPage(e){
         document.getElementById('first-infos').style.display = 'block';
         document.getElementById('second-infos').style.display = 'none';
         page = 'first';
-    }else if (page == 'adress'){
-        document.getElementById('adress').style.display = 'none';
+    }else if (page == 'address'){
+        document.getElementById('address').style.display = 'none';
         document.getElementById('second-infos').style.display = 'block';
         document.getElementsByClassName('info-register')[0].innerHTML = 'Preencha com suas informações pessoais'
         document.getElementsByClassName('small-info')[0].innerHTML = 'Preencha com suas informações pessoais'
@@ -197,14 +203,17 @@ function validateEmail(email) {
 }
 
 function showPass(){
-    let x = document.getElementsByClassName('input')[2];
+    let x = document.getElementsByClassName('input');
 
-    if (x.type === "password") {
-        x.type = "text";
-      } else {
-        x.type = "password";
+    for (i = 2; i< 4; i++){
+        if (x[i].type === "password") {
+            x[i].type = "text";
+          } else {
+            x[i].type = "password";
+        }
     }
-}
+
+} 
 
 document.querySelector('#flexCheckPass').addEventListener('click', showPass)
 document.getElementById('continue').addEventListener('click', formContinue);
