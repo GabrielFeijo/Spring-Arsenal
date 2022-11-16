@@ -35,6 +35,12 @@ public class HomeController {
         return "forum-page/index";
     }
 
+    
+    @RequestMapping(value = "/questionario", method = RequestMethod.GET)
+    public String form(){
+        return "form/index";
+    }
+
 
      
 }
