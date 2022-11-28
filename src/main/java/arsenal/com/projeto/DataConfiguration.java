@@ -17,8 +17,8 @@ public class DataConfiguration {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/arsenal2?userTimezone=true&serverTimezone=UTC");
-        dataSource.setUsername("GGEZ");
-        dataSource.setPassword("[bpx0xhQN.B_Ax_Q");
+        dataSource.setUsername("USER"); // Seu usuário
+        dataSource.setPassword("PASS"); // Sua senha
         return dataSource;
     }
 
