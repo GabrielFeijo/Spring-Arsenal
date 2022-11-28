@@ -5,7 +5,7 @@
 
  • O projeto objetiva o desenvolvimento de um sistema que será responsável pelo diagnóstico automatizado sobre o perfil e o momento empreendedor da pessoa empreendedora, que possa também de forma automatizada sugerir uma jornada de conhecimento mais adequada para a necessidade da pessoa empreendedora no momento que decide empreender.
 
-#### Passo a Passo para a execução desta solução
+### Passo a Passo para a execução desta solução
 
  O que você precisa:
 
