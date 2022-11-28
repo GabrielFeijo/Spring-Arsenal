@@ -28,9 +28,6 @@ public class UsuarioTrilha {
     @MapsId("idtrilha")
     @JoinColumn(name = "trilha_id")
     Trilha trilhas;
-     
-
-
 
 	public Integer getId() {
 		return id;
@@ -54,15 +51,6 @@ public class UsuarioTrilha {
 
 	public void setTrilhas(Trilha trilhas) {
 		this.trilhas = trilhas;
-	}
-
-
-
-	
-	
-
-	
-    
-	
+	}	
     
 }

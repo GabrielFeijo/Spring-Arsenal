@@ -1,19 +1,29 @@
 package arsenal.com.projeto.models;
 
+
+import java.util.Date;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name= "usuarios")
-public class Usuario {
-	
+public class Usuario {	
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
@@ -54,9 +64,28 @@ public class Usuario {
 
     @NotNull(message = "O nivel admin é obrigatório!")
     @Column(name = "admin",length = 2,nullable = false)
-    private Integer admin;
-  
-  
+    private Integer admin;    
+ 
+    @Column(name = "codigoRecuperacao",length = 255,nullable = true)
+    private String codigoRecuperacao;
+    
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name= "dataCodigo", nullable = true)
+    private Date dataCodigo;
+
+    @OneToOne(mappedBy = "usuario", cascade = CascadeType.ALL)
+    @PrimaryKeyJoinColumn
+    private Endereco endereco;
+    
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    Set<UsuarioTrilha> usuarioTrilha;
+    
+    @OneToMany(mappedBy = "usuario",cascade = CascadeType.ALL)
+    Set<Respostas> respostas;
+    
+    @OneToMany(mappedBy = "usuario",cascade = CascadeType.ALL)
+    Set<VideosAssistidos> videosAssistidos;
+    
 	public Integer getUserid() {
 		return userid;
 	}
@@ -104,8 +133,6 @@ public class Usuario {
 	public void setCPF(String cPF) {
 		CPF = cPF;
 	}
-	
-	
 
 	public String getData_nasc() {
 		return data_nasc;
@@ -138,5 +165,21 @@ public class Usuario {
 	public void setAdmin(Integer admin) {
 		this.admin = admin;
 	}
+
+	public String getCodigoRecuperacao() {
+		return codigoRecuperacao;
+	}
+
+	public void setCodigoRecuperacao(String codigoRecuperacao) {
+		this.codigoRecuperacao = codigoRecuperacao;
+	}
+
+	public Date getDataCodigo() {
+		return dataCodigo;
+	}
+
+	public void setDataCodigo(Date dataCodigo) {
+		this.dataCodigo = dataCodigo;
+	}    
    
 }

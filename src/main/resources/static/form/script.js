@@ -5,11 +5,8 @@ async function fetchQuestionsJSON() {
     return questions;
   }
   fetchQuestionsJSON().then(questions => {
-    questions; // fetched questions
- 
-    dados = questions
-       console.log(dados)
-    
+    questions; // fetched questions 
+    dados = questions    
     
 });
  
@@ -56,18 +53,45 @@ function backForm(){
     document.querySelector("#teste").style.display = 'block';
     local.innerHTML = '';
 }
-
-
-
-
 function nextQuestion(id){
  
+    const alternativas = document.getElementsByClassName('alternativas');
+    for(a=0;a<alternativas.length;a++){
+        if (alternativas[a].checked == true){
+            const id_pergunta = document.getElementsByClassName('label-question')[1].id;
+            const resposta = alternativas[a].value;            
+            const u_id = document.querySelector('#all').getAttribute('userid');     
+            
+            fetch("http://localhost:8080/enviar-resposta",
+            {
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json"
+                },
+                method: "POST",
+                body: JSON.stringify({
+                    "usuario_id": u_id,
+                    "pergunta_id":id_pergunta,
+                    "resposta": resposta                 
+                })
+            })
+            .then(res =>    console.log('Res, with message:', res))        
+            .catch(err => console.log('Error, with message:', err));
+
+
+            break;
+        }
+    }
+    console.log(alternativas);
     if (Number(id)){
+
+       
        
         local.innerHTML = ""
         
         var label = document.createElement("label");
         label.classList.add("label-question", "mt-4");
+        label.setAttribute("id", dados[id]['idpergunta']);
         label.appendChild(document.createTextNode(dados[id]['pergunta']));
         local.appendChild(label);
     
@@ -77,8 +101,9 @@ function nextQuestion(id){
         for(i=0;i<respostas.length;i++){
             let x = document.createElement("INPUT");
             x.setAttribute("type", "radio");
-            
+            x.value = respostas[i];
             x.setAttribute("id", "r"+i);
+            x.classList.add('alternativas');
             x.setAttribute("name", "radio");
             if( Number(proxima[i])){
                 x.setAttribute("onclick", "nextQuestion("+(proxima[i]-1)+")");
@@ -103,7 +128,7 @@ function nextQuestion(id){
         local.innerHTML = ""
         document.getElementsByClassName('wrap')[0].style.display = 'none'
         document.querySelector('#result').style.display = 'flex'
-        document.querySelector('.question').innerText = 'Resultado do Questionário Inicial'
+        document.querySelector('.question').innerText = 'Resultado Inicial'
         document.querySelector('.question').style.paddingLeft = '20px'
      
         var trail = document.querySelector('.trail')
@@ -163,15 +188,10 @@ function salvarTrilha(id){
         })
         .then(res => {
         if (res.ok) {
-            window.location.href="/sessao/inicio";
-    
-            
+            window.location.href="/sessao/inicio";  
         } 
-    })
-            
+    })            
 }
-
-
 
 document.querySelector('#level').addEventListener('change',firstQuestion);
 

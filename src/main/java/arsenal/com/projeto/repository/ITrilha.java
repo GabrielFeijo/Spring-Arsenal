@@ -6,6 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ITrilha extends JpaRepository<Trilha,Integer> {
+	
+	   boolean existsByIdtrilha(Integer idtrilha); 
 
 
 }

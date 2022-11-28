@@ -16,7 +16,7 @@ public class DataConfiguration {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/db_arsenal?userTimezone=true&serverTimezone=UTC");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/arsenal2?userTimezone=true&serverTimezone=UTC");
         dataSource.setUsername("GGEZ");
         dataSource.setPassword("[bpx0xhQN.B_Ax_Q");
         return dataSource;
@@ -33,7 +33,5 @@ public class DataConfiguration {
         return adapter;
     }
 }
-
-
 
 

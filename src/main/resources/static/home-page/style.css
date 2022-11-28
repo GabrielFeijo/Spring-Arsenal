@@ -1,0 +1,169 @@
+@media (max-width: 998px) {
+    .horizontal-line {
+        display: none;
+    }
+    .current-trail,
+    .trail-name {
+        margin: auto;
+    }
+    .trail-title {
+        text-align: center;
+        margin: 20px;
+    }
+    .div-wid img{
+        display: none;
+    }
+}
+.alert {
+    z-index: 99;
+}
+.nav-bg {
+    background-color: white;
+}
+.trail-title {
+    color: #861B64;
+    font-family: var(--bold-font);
+    padding-bottom: 10px;
+}
+.final li {
+    display: inline-block;
+}
+.final {
+    margin: 0 !important;
+}
+.navbar-collapse {
+    flex-grow: 0 !important;
+}
+.links,
+.link:visited,
+.link:active {
+    color: #a7277e !important;
+    font-family: var(--bold-font);
+    text-decoration: none;
+}
+.links:hover {
+    text-decoration: underline;
+}
+.logout{
+    border: none;
+    background-color: #FFF;
+}
+
+.openTrail{
+    cursor: pointer;
+}
+.main-image {
+    width: 299px;
+}
+.question {
+    width: 208px;
+    height: 55px;
+    padding-bottom: 10px;
+    color: white;
+    background: #DA217F;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    align-items: center;
+    font-family: var(--bold-font);
+}
+.horizontal-line {
+    width: 2px !important;
+    padding: 0 !important;
+    height: 70vh;
+    background-color: #861B64;
+}
+.button-acess {
+    width: 167px;
+    height: 43px;
+    font-family: var(--main-font);
+    padding-bottom: 10px;
+    color: #fff;
+    background: #DA217F;
+    border-radius: 25px;
+    border: 0;
+}
+.button-acess:hover {
+    background: #DA217FAF;
+}
+.current-trail {
+    width: 376px;
+    height: 150px;
+    background: #861B64;
+    border-radius: 25px;
+    position: relative;
+}
+.current-trail>img {
+    border-radius: 25px;
+    height: 150px;
+}
+.right-abs {
+    position: absolute;
+    right: 0;
+}
+.desc {
+    font-family: var(--bold-font);
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
+.trail-name {
+    max-width: 582px;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+.trail-name>p {
+    font-family: var(--bold-font);
+    color: #861B64;
+    margin-left: 20px;
+    padding: 10px 0 15px 0;
+}
+.div-wid{
+    width: 72vw;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    padding: 20px;
+    font-family: var(--bold-font);
+    justify-content: space-evenly;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.message{
+    max-width: 500px;
+   text-align: center;
+}
+.div-wid img{
+    width: 25vw;
+}
+
+.button-continue{
+    width: 187px;
+    height: 43px;
+    font-family: var(--bold-font);
+    padding-bottom: 7px;
+    color: #fff;
+    background: #DA217F;
+    border-radius: 25px;
+    border:0;
+    transition: 0.5s;
+}
+.button-continue:hover{
+    background-color: #fff;
+    color: #DA217F;
+    border: 2px solid #DA217F;
+}
+
+  .confirm-box {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+
+}
+

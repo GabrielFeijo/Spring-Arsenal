@@ -18,14 +18,9 @@
 	<head>
 	<body>
 		<form  action="">
-
 			<div id="alert"></div>
-
-
 			<div class="container wrap">
-
 				<div class="row justify-content-around">
-
 					<div class="col-md-6 align-self-center text-center">
 							<h2 class="title text-center mt-2" id="message">Novo por aqui? Faça seu cadastro!</h2>
 							<img src="register-page/images/register-image.png" alt="" class="main-image mt-5">
@@ -34,8 +29,7 @@
 						<p class="info-register">Preencha com suas informações pessoais</p>
 				</div>
 				<div class="col-12 col-md-5 align-self-center main">
-					<p class="small-info">Preencha com suas informações pessoais</p>
-				
+					<p class="small-info">Preencha com suas informações pessoais</p>			
 
 					<div id="first-infos"  >
 						<input type="text" name="nome"  placeholder="Nome Completo*" class="mt-6 input no-margim">
@@ -47,15 +41,12 @@
 							<label class="form-check-label line-1" for="flexCheckPass">
 								Mostrar Senha
 							</label>
-						</div>
-
-					
+						</div>					
 					</div>
 					<div id="second-infos">
 						<input type="tel" name="phone"  placeholder="Celular com DDD*" id="phone" class="mt-7 input no-margim">
 						<input type="text" name="cpf"  placeholder="CPF" id="CPF" class="mt-4 input no-margim">
-						<div ><label for="birth" class="line-1 label">Nascimento:⠀</label><input type="date" name="nascimento" id="birth" class="mt-4 input no-margim no-display"></div>
-				
+						<div ><label for="birth" class="line-1 label">Nascimento:⠀</label><input type="date" name="nascimento" id="birth" class="mt-4 input no-margim no-display"></div>				
 
 						<div class="mt-4 custom-select">
 							<label for="gender" class="line-1 label">Escolaridade:</label>
@@ -83,13 +74,11 @@
 						</div> 
 						
 					</div>
-					<div id="address">
+					<div id="adress">
 						<div class="mt-7 teste no-margim ">
-							<input type="text" name="city"  placeholder="Cidade*" class="left input-address no-margim" required>
-						
+							<input type="text" name="city"  placeholder="Cidade*" class="left input-adress no-margim" required>					
 					
-
-							<select id="UF" class="input-address no-margim select"  name="UF" required>
+							<select id="UF" class="input-adress no-margim select"  name="UF" required>
 								<option value="" disabled selected>Selecione</option>
 								<option value="AC">AC</option>
 								<option value="AL">AL</option>
@@ -120,10 +109,10 @@
 								<option value="TO">TO</option>
 							</select>
 						</div>
-						<input type="text" name="streetaddress"  placeholder="Rua*" class="mt-4 input input-lg no-margim" required>
+						<input type="text" name="streetAdress"  placeholder="Rua*" class="mt-4 input input-lg no-margim" required>
 						<div class="mt-4 teste no-margim">
-							<input type="number" name="number"  placeholder="Número*" class="left input-address no-margim" required>
-							<input type="text" name="CEP"  placeholder="CEP*" id="CEP" class="input-address no-margim" required>
+							<input type="number" name="number"  placeholder="Número*" class="left input-adress no-margim" required>
+							<input type="text" name="CEP"  placeholder="CEP*" id="CEP" class="input-adress no-margim" required>
 						</div>
 						<input type="text" name="complement"  placeholder="Complemento" class="mt-4 input input-lg no-margim">
 						<div class="form-check mt-4 label-wid no-margim">
@@ -143,6 +132,13 @@
 				</div>
 			</div>	
 		</form>
+		<section class="loading-box d-none">
+			<div class="box text-center m-auto">
+				<p>Carregando</p>
+				<div class="loader"></div>
+			</div>
+		   
+		</section>
 			
 						
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

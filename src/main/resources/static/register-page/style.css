@@ -36,7 +36,7 @@
 .mt-7{
     margin-top: 70px;
 }
-#second-infos,#address, .small-info{
+#second-infos,#adress, .small-info{
     display:none;
 }
 .label{
@@ -51,34 +51,25 @@
 .custom-select > select{
     cursor: pointer;
 }
-
 .select{
     cursor: pointer;
-    display: inline;
-  
+    display: inline;  
     padding-bottom: 3px;
-
 }
 .select > option{
     background-color: #861B64 !important;
-    color:#fff;
-   
+    color:#fff;   
 }
-
 .select-gender > option:disabled  {
     color:#f0f0f0;
 }
 .select-gender > option{
    cursor: pointer;
-
 }
 #first-infos{
     align-items: center;
 }
-
-
-.input-address{
-  
+.input-adress{  
     width: 100px;  
     background-color:#00000000;
     border:0;
@@ -89,12 +80,10 @@
     color: #861B64;
     padding-bottom: 5px;
 }
-.input-address::placeholder{
-    
+.input-adress::placeholder{    
     font-family: var(--bold-font);
     font-size: 16px;
     color: #861B64;
-
 }
 .input-lg{
     width: 300px;  
@@ -103,7 +92,6 @@
     margin-right: 40px;
     width: 150px ;  
 }
-
 .termos{
     font-family: var(--bold-font);
     text-decoration: underline;
@@ -111,7 +99,6 @@
 #flexCheckDefault, #flexCheckPass{
     margin-top: 7px;
     cursor: pointer;
-
 }
 #flexCheckDefault:checked,  #flexCheckPass:checked{
     background-color:#861B64;
@@ -119,7 +106,6 @@
 }
 #flexCheckDefault:focus,  #flexCheckPass:focus {
     box-shadow: none;
-
 }
 .label-wid{
     max-width: 300px;
@@ -127,8 +113,7 @@
 .div-wid{
     max-width: 150px;
 }
-@media (max-width: 1008px) {
-  
+@media (max-width: 1008px) {  
    #continue{
        margin-top:10px !important;
    }
@@ -147,9 +132,7 @@
     } 
    .small-info{
        display:block;
-   } 
- 
- 
+   }  
 }
 #enviar{
     display:none;
@@ -158,3 +141,53 @@
     width:300px;
    
 }
+
+
+/* loading */
+
+.loading-box{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+     
+ 
+    backdrop-filter: blur(5px) ;
+ 
+  
+ }
+ .box{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px 0;
+    border-radius: 10px;
+    
+ }
+ .box p {
+    font-family: var(--bold-font);
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+  
+ }
+ 
+ .loader {
+    border: 8px solid #861B64; /* Light grey */
+    border-top: 8px solid #fff; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+   
+    margin: auto;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

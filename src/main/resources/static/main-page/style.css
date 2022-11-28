@@ -1,0 +1,157 @@
+.question {
+   margin: auto;
+   color: white;
+   background: #DA217F;
+   display: flex;
+   align-items: center;
+   font-family: var(--bold-font);
+}
+.question p {
+   padding: 10px 0;
+   padding-bottom: 15px;
+   margin: auto;
+}
+.nav-bg {
+   background-color: white;
+}
+.final {
+   margin: 0 !important;
+}
+.final li {
+   display: inline-block;
+}
+.links,
+.link:visited,
+.link:active {
+   color: #a7277e !important;
+   font-family: var(--bold-font);
+   text-decoration: none;
+}
+.links:hover {
+   text-decoration: underline;
+}
+.logout{
+   border: none;
+   background-color: #FFF;
+}
+.container-iframe {
+   position: relative;
+   overflow: hidden;
+   width: 100%;
+   padding-top: 56.25%;
+   /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+}
+.bold-font {
+   font-family: var(--bold-font);
+}
+.main-font {
+   font-family: var(--main-font);
+}
+.progress {
+   max-width: 300px;
+   background-color: rgb(255, 255, 255) !important;
+   height: 20px !important;
+}
+.progress-bar {
+   padding-bottom: 3px;
+   background-color: #DA217F !important;
+}
+.ft-size {
+   font-size: 20px;
+   font-weight: bold;
+}
+.btn {
+   display: none !important;
+}
+
+.button-check {
+   width: 237px;
+   height: 45px;
+   font-family: var(--main-font);
+   padding-top: 7px;   
+   color: #fff;
+   background: #DA217F;
+   border-radius: 25px;
+   border: 0;
+   margin: auto;
+   text-align: center;
+  
+  
+}
+.button-check:hover {
+   background: #DA217FAF;
+}
+.btn-link ,.btn-link:visited,.btn-link:link{
+
+   text-decoration: none !important;
+   color: white !important;
+   padding: 0;
+}
+
+.bi-check-circle-fill::before{
+   color: #00AF50 !important;
+}
+.bi-x-circle-fill::before{
+   color: #e83845 !important;
+}
+.font-black{
+   color: #000;
+   margin-left: 5px;
+}
+
+@media (max-width: 995px) {
+   .first-part {
+      display: none;
+   }
+   .btn {
+      display: inline-block !important;
+   }
+   .col-sm-7 {
+      width: 95% !important;
+   }
+   .second {
+      text-align: center !important;
+      margin: auto;
+   }
+}
+
+@media (min-width: 768px) {
+   .container,
+   .container-md,
+   .container-sm {
+      width: 95% !important;
+
+   }
+}
+
+@media (max-width: 768px) {
+   .col-sm-7 {
+      margin: auto;
+   }
+}
+
+@media (max-width: 680px) {
+   #logo {
+      display: none;
+   }
+   .navbar>.container-fluid {
+      justify-content: center !important;
+   }
+}
+
+@media (max-width: 460px) {
+   .sidebar,
+   .menu-elements {
+      width: 90% !important;
+   }
+}

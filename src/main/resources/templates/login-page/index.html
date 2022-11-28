@@ -32,7 +32,6 @@ xmlns:th="http://www.thymeleaf.org">
           /*]]>*/
         </script>     
     </div>
-
  
     <div class="container wrap">
   
@@ -45,11 +44,9 @@ xmlns:th="http://www.thymeleaf.org">
             <div class="horizontal-line col-md-1"></div>
             <div class="col-12 col-md-5 align-self-center text-center ">
         
-                    <h2 class="title text-center">Faça seu login</h2>
-                 
+                    <h2 class="title text-center">Faça seu login</h2>                
                    
-                <form method="POST" th:action="@{sessao/inicio}">
-                
+                <form method="POST" th:action="@{sessao/inicio}">                
                     <input type="email" name="email"  id="email" placeholder="Email" class="text-center mt-4 input" >
                     <input type="password" name="pass" id="pass" placeholder="Senha" class="text-center mt-4 input"  >
                     <p class="account mt-2">Novo aqui? <a href="/registrar" class="cad">Cadastre-se</a></p>

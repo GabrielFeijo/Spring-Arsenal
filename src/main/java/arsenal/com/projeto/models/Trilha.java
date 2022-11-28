@@ -22,8 +22,7 @@ public class Trilha {
     private String modulo;
     
     @OneToMany(mappedBy="trilha",cascade = CascadeType.ALL)
-    private Set<Video> video;
-    
+    private Set<Video> video;    
 
     @OneToMany(mappedBy = "trilhas")
     Set<UsuarioTrilha> usuarioTrilha;
@@ -51,11 +50,5 @@ public class Trilha {
 	public void setModulo(String modulo) {
 		this.modulo = modulo;
 	}
-
-
-	
-
-
-
     
 }

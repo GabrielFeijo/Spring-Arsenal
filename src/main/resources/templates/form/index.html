@@ -21,8 +21,8 @@ xmlns:th="http://www.thymeleaf.org">
         <p class="ps-3">Questionário Inicial</p>
     
    </div>
-   
-    <div class="container wrap">
+
+    <div class="container wrap" th:attr="userid=${usuarioLogado.userid}" dataid="${usuarioLogado.userid}"  id="all">
         <div id="carouselExampleInterval" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000">
@@ -80,8 +80,6 @@ xmlns:th="http://www.thymeleaf.org">
         </div>
         <div class="align-self-center text-center mt-4"> 
             <div id="teste">
-
-              
                 <label for=""  class="label-question">Com base no texto acima, qual nível você acredita que se encontra?</label>
                 <select name="" id="level" class="select mt-2">
                         <option value="" disabled selected>Selecione uma opção</option>
@@ -98,25 +96,23 @@ xmlns:th="http://www.thymeleaf.org">
                 
         </div>
   </div>
-
-
     <div class="container wrap" id="result">
-
-        <div class="row justify-content-between">
-            
+    
+        <div class="row justify-content-center max-hg" >  
+             
         <div class="col-md-6 align-self-center"> 
             <h1 class="main-result">Seu resultado:</h1>     
             <h2 class="trail mt-5">Trilha Iniciante!</h2>
             <p class="mt-5 desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan felis vitae vehicula cursus. Duis semper imperdiet metus vulputate efficitur. Praesent odio odio, ultricies quis lacus vitae, viverra sollicitudin ligula. Pellentesque ultrices nisi et convallis.</p>
         </div>
         <div class="col-12 col-md-5 align-self-center text-center">
-            <img src="/form/images/draw_result.png" alt="" class="image">
+            <img src="/form/images/draw_result.png" alt="" >
             <div class="btn-wrap"><button class="button-acess mt-3" id="btn-enter"  th:onclick="'javascript:salvarTrilha(\'' + ${usuarioLogado.userid} + '\');'" >Ir para Trilha</button></div>
         </div>
     </div>     
 
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="/form/script.js" type="text/javascript"></script>
+    <script src="../form/script.js" type="text/javascript"></script>
     <script src="../script-alert/script.js" type="text/javascript"></script>
 
   

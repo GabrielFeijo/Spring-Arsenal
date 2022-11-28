@@ -1,75 +1,66 @@
 @font-face {
-  font-family: 'Amfibia Regular' ;
+  font-family: 'Amfibia Regular';
   src: url('fonts/Amfibia-RegularExpanded.ttf') format('truetype');
-
 }
 @font-face {
-  font-family: 'Amfibia DemiBold' ;
+  font-family: 'Amfibia DemiBold';
   src: url('fonts/Amfibia-DemiBoldExpanded.ttf') format('truetype');
 }
-
 @media (max-width: 768px) {
-  .welcome-image{
-    display:none;
+  .welcome-image {
+    display: none;
   }
-  .main{
-
+  .main {
     text-align: center;
   }
-  .line-2{
-    position:relative;
+  .line-2 {
+    position: relative;
     left: 50%;
-    transform:translate( -50%);
+    transform: translate(-50%);
   }
-
-
 }
-
 :root {
-  --main-font: 'Amfibia Regular',Arial, sans-serif;
-  --bold-font: 'Amfibia DemiBold',Arial, sans-serif;
+  --main-font: 'Amfibia Regular', Arial, sans-serif;
+  --bold-font: 'Amfibia DemiBold', Arial, sans-serif;
 }
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
-body{
+body {
   background-color: #f8d9e9 !important;
 }
-
-p{
+p {
   margin-bottom: 0 !important;
 }
-#alert{
+#alert {
   position: absolute;
   z-index: 99;
   width: 100%;
 }
-#main-font{
+#main-font {
   font-family: var(--main-font);
   font-size: 1.5em;
 }
-#bold-font{
-  font-family:var(--bold-font);
+#bold-font {
+  font-family: var(--bold-font);
   font-size: 1.5em;
 }
-.welcome-image{
+.welcome-image {
   min-width: 315px;
   height: 302px;
 }
-.image{
-  display:flex;
+.image {
+  display: flex;
   justify-content: end;
 }
-.line-1{
+.line-1 {
   font-family: var(--bold-font);
   font-size: 16px;
   color: #861B64;
 }
-.title{
+.title {
   font-family: var(--main-font);
   font-style: normal;
   max-width: 554px;
@@ -78,59 +69,48 @@ p{
   font-size: 2em;
   color: #861B64;
 }
-.line-2{
+.line-2 {
   font-family: var(--main-font);
-
   font-weight: 400;
   font-size: 16px;
   max-width: 389px;
   color: #861B64;
 }
-.start-button{
+.start-button {
   width: 167px;
   height: 43px;
   background-color: #DA217F;
   border-radius: 25px;
   border: 0;
   font-family: var(--main-font);
-  padding-bottom:8px;
-
+  padding-bottom: 8px;
   color: #FFFFFF;
-
 }
-.start-button:hover{
+.start-button:hover {
   background-color: #DA217Faf;
 }
-.wrap{
-  position:absolute;
+.wrap {
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform:translate(-50%,-50%);
-
-
+  transform: translate(-50%, -50%);
 }
-
 /* width */
 ::-webkit-scrollbar {
   width: 7px;
 
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
   background-color: #861B64;
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgb(255, 255, 255);
   border-radius: 10px;
 }
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #d4d4d4;
   cursor: pointer;
-
 }
-

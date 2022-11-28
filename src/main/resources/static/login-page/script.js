@@ -1,14 +1,14 @@
 
-function loginAccount(){
+function loginAccount() {
     let info = true;
-    for (i=0; i<2;i++){
-       if (document.getElementsByClassName('input')[i].value.length == ''){
-        info = false;
-        showAlert("error");
-        break;
+    for (i = 0; i < 2; i++) {
+        if (document.getElementsByClassName('input')[i].value.length == '') {
+            info = false;
+            showAlert("error");
+            break;
         }
     }
-    if (info == true){
+    if (info == true) {
         showAlert("sucess");
     }
 }

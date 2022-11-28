@@ -1,45 +1,44 @@
-.wrap{
-  
+.wrap {
   background-color: #FFFFFF;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.12);
   border-radius: 40px;
-  padding: 30px 0px; 
+  padding: 30px 0px;
+}
 
+#local {
+  margin: auto;
+}
 
+#teste {
+  max-width: 400px;
+  margin: auto;
 }
-#local{
-margin:auto;
-}
-#teste{
-max-width:400px;
-margin:auto;
-}
-.label-question{
+
+.label-question {
   font-family: var(--bold-font);
-  color: #861B64 ;
-  
+  color: #861B64;
 }
-.answer{
+
+.answer {
   font-family: var(--main-font);
-  color: #861B64 ;  
-  margin:0 12px 0 2px ;
-  cursor:pointer;
+  color: #861B64;
+  margin: 0 12px 0 2px;
+  cursor: pointer;
 }
-.question{
+
+.question {
   width: 208px;
   height: 55px;
   padding-bottom: 10px;
-  color:white;
+  color: white;
   background: #DA217F;
   border-radius: 0px 20px 20px 0px;
- 
-  display:flex;
+  display: flex;
   align-items: center;
-
   font-family: var(--bold-font);
-  
 }
-.select{
+
+.select {
   width: 200px;
   padding: 5px;
   padding-bottom: 10px;
@@ -48,32 +47,30 @@ margin:auto;
   border: 1px solid #861B64;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.12);
   border-radius: 20px;
-  outline:none;
+  outline: none;
   font-family: var(--main-font);
- 
 }
 
-.select > option{
+.select>option {
   background-color: #861b64f3 !important;
-  color:#fff;
- 
+  color: #fff;
 }
 
+.max-hg {
+  height: 400px !important;
+}
 
-
-
-#result{
-  display:none;
-  height:500px;
- 
-  position:absolute;
-  top:53%;
+#result {
+  display: none;
+  height: 500px;
+  position: absolute;
+  top: 53%;
   left: 50%;
-  transform:translate( -50%, -50%);
-
-
+  transform: translate(-50%, -50%);
 }
-.button-acess,.button-submit{
+
+.button-acess,
+.button-submit {
   width: 187px;
   height: 43px;
   font-family: var(--main-font);
@@ -81,20 +78,21 @@ margin:auto;
   color: #fff;
   background: #DA217F;
   border-radius: 25px;
-  border:0;
-
+  border: 0;
 }
-.button-acess{
+
+.button-acess {
   position: absolute;
-  bottom:40px;
+  bottom: 40px;
   right: 40px;
 }
-.button-acess:hover, .button-submit:hover{
+
+.button-acess:hover,
+.button-submit:hover {
   background: #DA217FAF;
 }
 
-
-.button-back{
+.button-back {
   width: 187px;
   height: 43px;
   font-family: var(--main-font);
@@ -102,106 +100,116 @@ margin:auto;
   color: #fff;
   background: #DA217F;
   border-radius: 25px;
-  border:0;
+  border: 0;
 }
 
-
-
-
-.main-result, .trail{
-
-
-font-family: var(--main-font);
-font-style: normal;
-
-font-size: 40px;
-line-height: 48px;
-display: flex;
-align-items: center;
-
-color: #861B64;
-}
-.desc{
-font-family: var(--main-font);
-
-font-size: 16px;
-line-height: 19px;
-display: flex;
-align-items: center;
-
-color: #861B64;
-}
-.trail{
-font-family: var(--bold-font)
+.main-result,
+.trail {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-size: 40px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  color: #861B64;
 }
 
+.desc {
+  font-family: var(--main-font);
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #861B64;
+}
+
+.trail {
+  font-family: var(--bold-font)
+}
 
 input[type='radio'] {
-accent-color: #861B64;
+  accent-color: #861B64;
 }
-#carouselExampleInterval{
-max-width: 800px;
-margin:auto;
-}
-.steps{
-padding: 0 80px;
 
-margin:auto;
+#carouselExampleInterval {
+  max-width: 800px;
+  margin: auto;
 }
-.description{
-font-family: var(--main-font) ;
+
+.steps {
+  padding: 0 80px;
+  margin: auto;
 }
-h2{
-font-family: var(--bold-font);
-margin-bottom: 20px;
-color: #861B64;
+
+.description {
+  font-family: var(--main-font);
 }
+
+h2 {
+  font-family: var(--bold-font);
+  margin-bottom: 20px;
+  color: #861B64;
+}
+
+.carousel-control-prev {
+  left: -5% !important;
+}
+
+.carousel-control-next {
+  right: -5% !important;
+}
+
 .carousel-control-next-icon {
-background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23861B64'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") !important;
-
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23861B64'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
+
 .carousel-control-prev-icon {
-background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23861B64'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>") !important;
-}
-.carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon {
-filter: none !important;
-}
-.div-wid,.cancel-img{
-max-width:70%;
-margin:auto;
-display:flex;
-align-items: center;
-
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23861B64'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>") !important;
 }
 
-.cancel-img{
-max-width: 40%;
-margin-right: 10%;
+.carousel-dark .carousel-control-next-icon,
+.carousel-dark .carousel-control-prev-icon {
+  filter: none !important;
+}
+
+.div-wid,
+.cancel-img {
+  max-width: 70%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.cancel-img {
+  max-width: 40%;
+  margin-right: 10%;
 }
 
 
-@media (max-width: 768px){
-.image{
-  display: none;
-}
+@media (max-width: 768px) {
+  .image {
+    display: none;
+  }
 }
 
-@media (max-width: 605px){
-.wrap{
-  margin: 20px 0;
-  position: static ;
-  transform:translate( 0%,0%);
+@media (max-width: 605px) {
+  .wrap {
+    margin: 20px 0;
+    position: static;
+    transform: translate(0%, 0%);
+  }
 }
+
+@media (max-width: 547px) {
+  .cancel-img {
+    display: none;
+  }
 }
-@media (max-width: 547px){
-.cancel-img{
-  display: none;
-}
-}
-@media  (max-height: 633px) {
-.wrap{
-  margin: 20px 0;
-  position: static ;
-transform:translate( 0%,0%);
-}
+
+@media (max-height: 633px) {
+  .wrap {
+    margin: 20px 0;
+    position: static;
+    transform: translate(0%, 0%);
+  }
 }

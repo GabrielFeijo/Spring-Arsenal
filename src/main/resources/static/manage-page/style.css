@@ -1,0 +1,206 @@
+@media (max-width: 680px) {
+    #logo {
+        display: none;
+    }
+}
+
+@media (max-width: 760px) {
+    .final {
+        padding: 0 !important;
+    }
+}
+
+.wrap-table {
+    margin-top: 10px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.question {
+    width: 208px;
+    color: white;
+    background: #DA217F;
+    border-radius: 0px 20px 20px 0px;
+    display: flex;
+    align-items: center;
+    font-family: var(--bold-font);    
+}
+
+.question p {
+    padding: 10px 0;
+    padding-bottom: 15px;
+    margin: auto;
+}
+.wrap-table{
+    height: 75vh !important;
+    overflow-y: scroll;
+}
+.table {
+    background-color: white;
+    max-width: 70vw;
+    margin: auto;
+    text-align: center;
+    border-radius: 20px;  
+
+}
+
+tr {
+    vertical-align: middle;
+}
+th {
+    font-family: var(--main-font);
+    color: #861B64;
+    position: relative;
+    top: -4px;
+}
+.vertical-align {
+    display: inline-block;
+    vertical-align: middle;
+}
+.v-align {
+    vertical-align: 1px;
+}
+.icons {
+    font-size: 1.5em;
+}
+.search {
+    border: none;
+    outline: none;
+    text-align: center;
+    color: #861B64;
+}
+.search::placeholder {
+    color: #861b64b0;
+}
+.text-left {
+    text-align: left !important;
+}
+.button-add {
+    width: 127px;
+    height: 33px;
+    font-family: var(--main-font);
+    padding-bottom: 10px;
+    color: #fff;
+    background: #DA217F;
+    border-radius: 25px;
+    border: 0;
+}
+.button-add:hover {
+    background: #DA217FAF;
+}
+.btn-user {
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.btn-admin,
+.btn-admin:visited {
+    color: black;
+    font-size: 1.2em;
+}
+
+.btn-add:hover {
+    color: #00a000;
+}
+
+.trash:hover,
+.btn-remove:hover {
+    color: #cc2525;
+}
+.pen,.pen:visited,.pen:link{
+    color: #000;
+}
+.pen:hover {
+    color: #fac107;
+}
+.larg {
+    width: 150px !important;
+}
+.nav-bg {
+    background-color: white;
+}
+.final li {
+    display: inline-block;
+}
+.final {
+    margin: 0 !important;
+}
+.navbar-collapse {
+    flex-grow: 0 !important;
+}
+.links,
+.link:visited,
+.link:active {
+    color: #a7277e !important;
+    font-family: var(--bold-font);
+
+}
+.links:hover {
+    text-decoration: underline;
+}
+.logout{
+    border: none;
+    background-color: #FFF;
+ }
+/* CORFIM */
+.confirm-box {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+}
+.box {
+    box-shadow: 0px 1px 3px 3px #00000017;
+    background-color: white;
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 0;
+    border-radius: 10px;
+}
+.buttons {
+    text-align: center;
+}
+.button {
+    width: 187px;
+    height: 43px;
+    font-family: var(--main-font);
+    padding-bottom: 8px;
+    border-radius: 25px;
+    border: 0;
+    display: inline-block;
+}
+.btn-confirm {
+    width: 120px;
+    height: 43px;
+    font-family: var(--main-font);
+    padding-bottom: 8px;
+    border-radius: 25px;
+    border: 0;
+    display: inline-block;
+}
+.default,
+#continue {
+    color: #fff;
+    background-color: #DA217F;
+}
+.delete {
+    background-color: #ffffff;
+    color: #DA217F;
+    font-family: var(--bold-font);
+    border: 2px solid #DA217F;
+}
+.delete:hover {
+    border: 2px solid #cc2525;
+    color: #cc2525;
+}
+.default:hover,
+#continue:hover {
+    background-color: #DA217FAF;
+}

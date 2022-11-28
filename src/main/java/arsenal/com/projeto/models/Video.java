@@ -1,5 +1,7 @@
 package arsenal.com.projeto.models;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
@@ -34,6 +37,9 @@ public class Video {
     @JoinColumn(name="trilha_idtrilha", nullable=false)
 	 private Trilha trilha;
 	
+	
+	  @OneToMany(mappedBy = "video")
+	    Set<VideosAssistidos> videosAssistidos;
 
 	public Integer getIdvideo() {
 		return idvideo;
@@ -59,11 +65,14 @@ public class Video {
 		this.titulo = titulo;
 	}
 
-	
+	public Trilha getTrilha() {
+		return trilha;
+	}
 
+	public void setTrilha(Trilha trilha) {
+		this.trilha = trilha;
+	}
 
-	
-	
 	
 	
 

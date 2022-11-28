@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>     
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css" type="text/css">
+    <link rel="stylesheet" href="/main-page/style.css" type="text/css">
+    <link rel="stylesheet" href="/main-page/sidebar.css" type="text/css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">    
+    <title>Trilha - Arsenal</title>
+</head>
+<body>
+    <div id="alert"></div>
+
+	<nav class="sidebar">
+				
+        <!-- close sidebar menu -->
+        <div class="dismiss">
+            <i class="bi bi-arrow-left"></i>
+        </div>
+        
+        <ul class="list-unstyled menu-elements bold-font ">
+            <li class="trail-item">
+                <p class="ft-size">Descobrimento do problema ou oportunidade</p>
+                <p class="mt-4">PROGRESSO DA TRILHA</p>
+                <div class="progress mt-2">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" th:style="'width:'+@{${Porcentagem}}+';'" aria-valuemin="0" aria-valuemax="100" th:text="${Porcentagem}"></div>
+                    <span  th:if="${Porcentagem == '0%'}" class="font-black">
+                        <div th:text="${Porcentagem}"></div>
+                    </span>
+                    
+                    
+                </div>
+                <p class="mt-4">Objetos educacionais</p>
+    
+                <span th:each="video : ${usuarioVideo}">
+                    <p class="mt-2">
+                        <i class="bi bi-youtube"></i> 
+                        <span th:text="${video.titulo}"></span> 
+                        <span th:if="${video.assistido != null}">
+                            <i class="bi bi-check-circle-fill "></i>
+                        </span>
+                       
+                        <span th:unless="${video.assistido != null}">
+                            <i class="bi bi-x-circle-fill "></i>
+                        </span>
+                    </p> 
+                </span>
+            </li>
+       
+
+        </ul>
+
+    
+    </nav>
+
+    <div class="overlay"></div>
+
+    
+        <!-- open sidebar menu -->
+        <a class="btn btn-primary btn-customized open-menu btn-hide" href="#" role="button">
+          <span><i class="bi bi-text-indent-left"></i></span>
+        </a>
+
+    <header>
+        <nav class="navbar navbar-light nav-bg">
+            <div class="container-fluid">
+                <img src="../forum-page/images/logo-Arsenal.png" alt="" width="160" id="logo">
+                <div class="d-flex text-center">
+                    <ul class="me-auto final">
+                        <li class="nav-item">
+                            <a class="nav-link  links" aria-current="page" href="/sessao/inicio">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links" href="#">Trilhas</a>
+                        </li>             
+                        <li class="nav-item">
+                            <a class="nav-link links" href="/contato">Contato</a>
+                        </li>                 
+                        <li class="nav-item">
+                            <a class="nav-link links" href="/perguntas-frequentes">Dúvidas?</a>
+                        </li>
+                        <li class="nav-item">
+                            <form method="post" action="logout" >
+                                <input type="submit" value="Sair"  class="links logout">
+                            </form>                           
+                        </li>   
+                                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+ 
+    <div class="question text-center">
+            <p>TRILHA - <span th:text="${usuarioVideo[0].trilha}"></p>
+    </div>
+ 
+    <div class="container mt-4"  >
+        <div class="row ">
+            <div class="col-sm-5 bold-font mt-1 first-part">
+                <p class="ft-size"><span th:text="${usuarioVideo[0].trilha}"></p>
+                <p class="mt-2">PROGRESSO DA TRILHA</p>
+                <div class="progress mt-2">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" th:style="'width:'+@{${Porcentagem}}+';'" aria-valuemin="0" aria-valuemax="100" th:text="${Porcentagem}"></div>
+                    <span  th:if="${Porcentagem == '0%'} " class="font-black">
+                        <div th:text="${Porcentagem}"></div>
+                    </span>
+                    
+                    
+                </div>
+                <p class="mt-2">Objetos educacionais</p>
+               <span th:each="video : ${usuarioVideo}">
+                <p class="mt-2">
+                    <i class="bi bi-youtube"></i> 
+                    <span th:text="${video.titulo}"></span> 
+                    <span th:if="${video.assistido != null}">
+                        <i class="bi bi-check-circle-fill "></i>
+                    </span>
+                   
+                    <span th:unless="${video.assistido != null}">
+                        <i class="bi bi-x-circle-fill "></i>
+                    </span>
+                </p> 
+               </span>
+            </div>
+            <div class="col-sm-7 main-font second">
+                <p class="text">CONTÉUDO 1 A <span th:text="${#arrays.length(usuarioVideo)}"></span></p>               
+                <h2 class="bold-font"><span th:text="${videoAtual.titulo}"></span></h2>       
+                <div class="container-iframe mt-2">                
+                    <div class="responsive-iframe" id="iframe" th:attr="data-video-url=${videoAtual.url},data-video-id=${videoAtual.idvideo},data-usuario-id=${usuarioLogado.userid},data-trilha-id=${usuarioVideo[0].trilhaid}"></div>
+                </div>
+                <div class="button-check mt-3 d-none"><a href="http://localhost:8080/sessao/trilhas" class="btn-link">Marcar como concluído!</a></div>
+            </div>
+        </div>
+    </div>
+            
+<script src="/main-page/jquery-3.3.1.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/main-page/script.js" type="text/javascript"></script>
+    <script src="/main-page/sidebar.js" type="text/javascript"></script>
+    <script src="../script-alert/script.js" type="text/javascript"></script>
+</body>
+</html>

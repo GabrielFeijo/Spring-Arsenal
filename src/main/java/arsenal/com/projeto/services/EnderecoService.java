@@ -3,8 +3,8 @@ package arsenal.com.projeto.services;
 import arsenal.com.projeto.models.Endereco;
 import arsenal.com.projeto.repository.IEndereco;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
+
 
 @Service
 public class EnderecoService {
@@ -13,7 +13,13 @@ public class EnderecoService {
     public EnderecoService(IEndereco add) {
         this.add = add;
     }
-
+    
+    
+    public Endereco getEndereco(Integer id) {
+    	Endereco endereco = add.getReferenceById(id);
+        return (endereco);
+    }
+    
 
     public List<Endereco> listaEnderecos() {
         List<Endereco> lista = add.findAll();
